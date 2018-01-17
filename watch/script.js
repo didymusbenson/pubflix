@@ -10,14 +10,11 @@ if (window.location.search.indexOf('movie=') > -1) {
         if (Object.values(movie).includes(current_movie)) {
             var theatre = document.querySelector(".player");
             theatre.innerHTML = "<video width=\"100%\" controls autoplay type=\"video/mp4\"  data-movie=\"" + movie.name + "\" src=\"" + movie.video + "\"> Your browser does not support the video tag.  </video>";
-        } else {
-            // TODO: Error handling for stupid people
-            alert("something went wrong");
-            window.locaiton.replace("https://didymusbenson.github.io/pubflix/");
         }
     });
+
 } else {
     /* If something doesn't work, go back to main page. */
     alert("something went wrong");
-    window.locaiton.replace("https://didymusbenson.github.io/pubflix/");
+    window.location.replace("https://didymusbenson.github.io/pubflix/");
 }
