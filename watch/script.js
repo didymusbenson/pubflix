@@ -3,10 +3,11 @@ if (window.location.search.indexOf('movie=') > -1) {
     var movies = make_movies();
     // Pull movie from URL
     var current_movie = window.location.href.split("=")[1];
-
     // Find the right movie object
     movies.forEach(function (movie) {
-        if (movies.values.contains(current_movie)) {
+        console.log(movie.values);
+        // Horray for Object.values!
+        if (movie.values.includes(current_movie)) {
             var theatre = document.querySelector(".player");
             theatre.innerHTML = "<video width=\"100%\" controls autoplay type=\"video/mp4\"  data-movie=\"" + movie.name + "\" src=\"" + movie.video + "\"> Your browser does not support the video tag.  </video>";
         } else {
