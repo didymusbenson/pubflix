@@ -8,3 +8,4 @@ body{margin:0; background:black; color:white; max-height:100vh; overflow:hidden;
     text-align:center;
 }
 .player{height:calc(100vh - 50px); width:100vw; overflow:hidden;}
+video{height:calc(100% - 100px); width:100%;}
