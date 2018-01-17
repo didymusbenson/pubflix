@@ -6,7 +6,7 @@ if (window.location.search.indexOf('movie=') > -1) {
 
     // Find the right movie object
     movies.forEach(function (movie) {
-        if (movie.values.contains(current_movie)) {
+        if (movies.values.contains(current_movie)) {
             var theatre = document.querySelector(".player");
             theatre.innerHTML = "<video width=\"100%\" controls autoplay type=\"video/mp4\"  data-movie=\"" + movie.name + "\" src=\"" + movie.video + "\"> Your browser does not support the video tag.  </video>";
         } else {
