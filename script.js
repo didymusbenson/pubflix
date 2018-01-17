@@ -151,7 +151,7 @@ function learn(movie) {
 function play_movie(movie) {
     var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
 
-    window.location.replace(window.location + "/watch/index.html?movie=" + movie_obj.name);
+    window.location.replace(window.location + "watch/index.html?movie=" + movie_obj.name);
 
     //clear the theater first
     var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
