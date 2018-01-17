@@ -1,0 +1,10 @@
+body{margin:0; background:black; color:white; max-height:100vh; overflow:hidden; font-family:sans-serif;}
+.top-bar{height: 50px; line-height:50px;display:flex;}
+.back-button{width:100px; text-align:center;}
+.movie-title{
+    width:calc(100% - 100px);
+    padding-right:100px;
+    font-size:20pt;
+    text-align:center;
+}
+.player{height:calc(100vh - 50px); width:100vw; overflow:hidden;}
