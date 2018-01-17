@@ -1,0 +1,132 @@
+.cards {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+
+/*    align-items:flex-start;*/
+}
+
+.card:hover {
+    box-shadow: 0px 0px 3px 2px #555;
+    transition: 0.2s ease-out;
+    transform: scale(1.2);
+    z-index: 2000;
+    box-shadow: 5px, 5px, 5px, white;
+}
+
+.card { flex-grow:1;
+    position: relative;
+    margin-bottom: 15px;
+    background: white;
+    cursor: pointer;
+    min-width: 200px;
+    width:250px;
+    max-width:calc(25% - 20px);
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s ease-out;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+}
+
+
+.cards.hidden {
+    display: none;
+}
+
+.card-img {
+    max-height: 250px;
+    background: black;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+.card-img img {
+    width: 100%;
+}
+
+.card-title {
+    text-shadow:2px 2px 5px black;
+    display: flex;
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    height: calc(100%);
+    width: 100%;
+}
+
+.card-title h3 {
+    align-self:center;
+
+    margin-left: 5px;
+    text-shadow: 4px, 4px, 4px black;
+    font-size: 19px;
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+
+.card a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.card a:hover {
+    color: white;
+}
+.card:hover .card-display{
+    text-shadow:2px 2px 5px black;
+    display:flex;
+   opacity:1;
+    z-index;3000;
+    background:rgba(255,2552,255,0.3);
+        align-items: flex-end;
+    justify-content: space-around;
+        position:absolute;
+    bottom:0;
+    width: 100%;
+    transition:0.5s ease-in-out;
+
+}
+.card-display {
+    text-shadow:2px 2px 5px black;
+    display:flex;
+    opacity:0;    z-index;3000;
+    background:rgba(255,2552,255,0.2);
+        align-items: flex-end;
+    justify-content: space-around;
+        position:absolute;
+    bottom:0;
+    width: 100%;
+    transition:0.5s ease-in-out;
+}
+
+.card-display p {
+    margin:10px 0;
+
+    font-size: 5vmin;
+    text-align: left;
+    box-sizing: content-box;
+    color: white;
+}
+
+.card-display p:hover {
+    transition: 0.2s ease-in;
+    transform: scale(1.4);
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.card-display p[data-favorited="true"] {
+    color: darkgoldenrod;
+}
