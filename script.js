@@ -151,16 +151,22 @@ function learn(movie) {
 function play_movie(movie) {
     var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
 
-    window.location.replace(window.location + "watch/index.html?movie=" + movie_obj.name);
+    if (window.location.href[window.location.href.length -1] != "/"){
+        window.location = window.location + "/watch?movie=" + movie_obj.id;
+    }
+    else{
+        window.location = window.location + "watch?movie=" + movie_obj.id;
+    }
 
-    //clear the theater first
-    var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
-    var theatre = document.querySelector(".theatre");
-    theatre.innerHTML = "<video width=\"100%\" controls autoplay type=\"video/mp4\"  data-movie=\"" + movie_obj.name + "\" src=\"" + movie_obj.video + "\"> Your browser does not support the video tag.  </video>";
-    // Scroll to top of page to view movie.
-    //    window.scrollTo(0, 0);
-    document.querySelector(".theatre").scrollIntoView();
-    // Create video tag in theater
+//
+//    //clear the theater first
+//    var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
+//    var theatre = document.querySelector(".theatre");
+//    theatre.innerHTML = "<video width=\"100%\" controls autoplay type=\"video/mp4\"  data-movie=\"" + movie_obj.name + "\" src=\"" + movie_obj.video + "\"> Your browser does not support the video tag.  </video>";
+//    // Scroll to top of page to view movie.
+//    //    window.scrollTo(0, 0);
+//    document.querySelector(".theatre").scrollIntoView();
+//    // Create video tag in theater
 }
 
 
