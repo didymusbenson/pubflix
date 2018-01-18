@@ -6,7 +6,7 @@ function make_ui(movies) {
         console.log(stringified_movie);
         console.log(movie.genre);
         var cards = document.querySelector("." + movie.genre);
-        cards.innerHTML += "<div class='card'><div class='card-img' ><img  src='" + movie.poster + "'></div><div class='card-title' data-movie=\"" + stringified_movie + "\" data-action='watch'><h3 >" + movie.title + "</h3></div><div class='card-display'><p data-movie='" + movie.id + "' data-action='learn'><a href='#popup'>?</a></p><p data-movie=\"" + stringified_movie + "\" data-action='watch'>▶</p><p data-action='favorite' data-movie='" + movie.id + "' data-favorited='false'>☆</p></div></div>";
+        cards.innerHTML += "<div class='card'><div class='card-img' ><img  src='" + movie.poster + "'></div><div class='card-title' data-movie=\"" + stringified_movie + "\" data-action='watch'><h3 >" + movie.title + "</h3></div><div class='card-display'><p data-movie='" + movie.id + "' data-action='learn'><a href='#popup'>?</a></p><p data-movie=\"" + stringified_movie + "\" data-action='watch'>🎥</p><p data-action='favorite' data-movie='" + movie.id + "' data-favorited='false'>☆</p></div></div>";
     });
     // MAYBE: add tabs for genres and a tab for favorites.
     // MAYBE: add sorting (if not tabs) and a way to quickly grab favorites
