@@ -14,6 +14,11 @@ if (window.location.search.indexOf('movie=') > -1) {
             theatre.innerHTML = "<video  controls autoplay type=\"video/mp4\"  data-movie=\"" + movie.name + "\" src=\"" + movie.video + "\"> Your browser does not support the video tag.  </video>";
         }
     });
+
+    document.querySelector(".back-button").addEventListener('click', function (event) {
+                window.history.back();
+            }, false);
+
 } else {
     /* If something doesn't work, go back to main page. */
     window.location.replace("https://didymusbenson.github.io/pubflix/");
