@@ -125,8 +125,8 @@ function learn(movie) {
     // Reset the popup and tell user to be patient.
     var popup = document.querySelector("#popup");
     // Consider adding a loading animation?
-    popup.querySelector("h2").innerHTML = "LOADING . . . ";
-    popup.querySelector("#desc").innerHTML = "";
+    popup.querySelector("h2").innerHTML = "THIS FEATURE HAS BEEN DEPRECATED.";
+    popup.querySelector("#desc").innerHTML = "Sorry guys. The API I used broke.";
     popup.querySelector("#starring").innerHTML = "";
 
     // troubleshoot this?
