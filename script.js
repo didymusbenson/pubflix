@@ -151,11 +151,11 @@ function learn(movie) {
 function play_movie(movie) {
     var movie_obj = JSON.parse(movie.replace(/\'/g, '"'));
 
-    if (window.location.href[window.location.href.length -1] != "/"){
-        window.location = window.location + "/watch?movie=" + movie_obj.id;
-    }
-    else if(window.location.href[window.location.href.length - 1] === "#"){
+    if(window.location.href[window.location.href.length - 1] === "#"){
         window.location = window.location.href.split("#")[0] + "watch?movie=" + movie_obj.id;
+    }
+    else if (window.location.href[window.location.href.length -1] != "/"){
+        window.location = window.location + "/watch?movie=" + movie_obj.id;
     }
     else{
         window.location = window.location + "watch?movie=" + movie_obj.id;
